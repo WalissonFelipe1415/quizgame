@@ -5,7 +5,6 @@ let score = 0;
 async function fetchQuestions() {
     try {
         const response = await fetch("./quiz.json");
-
         if (!response.ok) {
             throw new Error(`Erro ao buscar o arquivo: ${response.status}`);
         }
