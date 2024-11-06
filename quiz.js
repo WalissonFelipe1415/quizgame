@@ -4,7 +4,7 @@ let score = 0;
 
 async function fetchQuestions() {
     try {
-        const response = await fetch("https://raw.githubusercontent.com/WalissonFelipe1415/quizgame/main/quiz.json");
+        const response = await fetch("./quiz.json");
 
         if (!response.ok) {
             throw new Error(`Erro ao buscar o arquivo: ${response.status}`);
