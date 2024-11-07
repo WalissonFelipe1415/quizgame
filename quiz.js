@@ -47,7 +47,8 @@ function loadQuestion() {
     const optionButtons = document.querySelectorAll(".option");
 
     // Exibe a pergunta com a numeração
-    questionElement.innerText = `${currentQuestion + 1}. ${questions[currentQuestion].question}`;
+    questionElement.innerText = `Pergunta ${currentQuestion + 1}: ${questions[currentQuestion].question}`;
+    
     optionButtons.forEach((button, index) => {
         button.innerText = questions[currentQuestion].options[index];
         button.style.backgroundColor = "#007bff";
