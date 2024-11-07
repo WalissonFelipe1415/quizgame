@@ -12,7 +12,8 @@ async function fetchQuestions() {
         const data = await response.json();
         console.log("Dados carregados com sucesso:", data);
 
-        questions = data;
+        // Embaralha as perguntas carregadas
+        questions = shuffleArray(data);
 
         if (questions.length === 0) {
             throw new Error("Nenhuma pergunta encontrada.");
@@ -23,6 +24,15 @@ async function fetchQuestions() {
         console.error("Erro ao carregar perguntas:", error);
         alert("Não foi possível carregar as perguntas. Verifique a URL e a conexão com a internet.");
     }
+}
+
+// Função para embaralhar o array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];  // Troca os elementos de lugar
+    }
+    return array;
 }
 
 function loadQuestion() {
@@ -36,39 +46,24 @@ function loadQuestion() {
     const questionElement = document.getElementById("question");
     const optionButtons = document.querySelectorAll(".option");
 
-    const shuffledOptions = questions[currentQuestion].options
-        .map(value => ({ value, sort: Math.random() }))
-        .sort((a, b) => a.sort - b.sort)
-        .map(({ value }) => value);
-
     questionElement.innerText = questions[currentQuestion].question;
     optionButtons.forEach((button, index) => {
-        button.innerText = shuffledOptions[index];
+        button.innerText = questions[currentQuestion].options[index];
         button.style.backgroundColor = "#007bff";
         button.disabled = false;
-        button.onclick = () => selectOption(button.innerText);
     });
 }
 
-function selectOption(selectedOptionText) {
+function selectOption(selectedOption) {
     const question = questions[currentQuestion];
     const optionButtons = document.querySelectorAll(".option");
 
-    if (selectedOptionText === question.options[question.answer]) {
+    if (selectedOption === question.answer) {
         score++;
-        optionButtons.forEach(button => {
-            if (button.innerText === selectedOptionText) {
-                button.style.backgroundColor = "#28a745";
-            }
-        });
+        optionButtons[selectedOption].style.backgroundColor = "#28a745";
     } else {
-        optionButtons.forEach(button => {
-            if (button.innerText === selectedOptionText) {
-                button.style.backgroundColor = "#dc3545";
-            } else if (button.innerText === question.options[question.answer]) {
-                button.style.backgroundColor = "#28a745";
-            }
-        });
+        optionButtons[selectedOption].style.backgroundColor = "#dc3545";
+        optionButtons[question.answer].style.backgroundColor = "#28a745";
     }
 
     optionButtons.forEach(button => button.disabled = true);
@@ -83,33 +78,6 @@ function nextQuestion() {
 function showResults() {
     const quizContainer = document.getElementById("quiz");
     quizContainer.innerHTML = `<h2>Você acertou ${score} de ${questions.length} perguntas!</h2>`;
-    
-    // Atualiza o arquivo resultados.json
-    updateResults(score);
-}
-
-async function updateResults(score) {
-    try {
-        const response = await fetch("./resultados.json");
-        const resultsData = await response.json();
-        
-        // Incrementa os valores
-        resultsData.totalJogadores += 1;
-        resultsData.totalAcertos += score;
-
-        // Salva de volta no JSON
-        await fetch("./resultados.json", {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(resultsData)
-        });
-
-        console.log("Resultados atualizados com sucesso!");
-
-    } catch (error) {
-        console.error("Erro ao atualizar resultados:", error);
-        alert("Não foi possível atualizar os resultados.");
-    }
 }
 
 // Inicia o quiz
