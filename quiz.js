@@ -36,24 +36,43 @@ function loadQuestion() {
     const questionElement = document.getElementById("question");
     const optionButtons = document.querySelectorAll(".option");
 
+    // Embaralha as opções para cada pergunta
+    const shuffledOptions = questions[currentQuestion].options
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+
     questionElement.innerText = questions[currentQuestion].question;
     optionButtons.forEach((button, index) => {
-        button.innerText = questions[currentQuestion].options[index];
+        button.innerText = shuffledOptions[index];
         button.style.backgroundColor = "#007bff";
         button.disabled = false;
+        
+        // Adiciona o evento de clique para verificar a resposta correta
+        button.onclick = () => selectOption(button.innerText);
     });
 }
 
-function selectOption(selectedOption) {
+function selectOption(selectedOptionText) {
     const question = questions[currentQuestion];
     const optionButtons = document.querySelectorAll(".option");
 
-    if (selectedOption === question.answer) {
+    // Verifica se a opção selecionada corresponde à resposta correta
+    if (selectedOptionText === question.options[question.answer]) {
         score++;
-        optionButtons[selectedOption].style.backgroundColor = "#28a745";
+        optionButtons.forEach(button => {
+            if (button.innerText === selectedOptionText) {
+                button.style.backgroundColor = "#28a745";  // Cor verde para resposta correta
+            }
+        });
     } else {
-        optionButtons[selectedOption].style.backgroundColor = "#dc3545";
-        optionButtons[question.answer].style.backgroundColor = "#28a745";
+        optionButtons.forEach(button => {
+            if (button.innerText === selectedOptionText) {
+                button.style.backgroundColor = "#dc3545";  // Cor vermelha para resposta incorreta
+            } else if (button.innerText === question.options[question.answer]) {
+                button.style.backgroundColor = "#28a745";  // Cor verde para a resposta correta
+            }
+        });
     }
 
     optionButtons.forEach(button => button.disabled = true);
