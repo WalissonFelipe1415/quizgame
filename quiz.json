@@ -1,7 +1,7 @@
 [
     {
-        "question": "qual e fruta",
-        "options": ["rabanete", "tomate", "beterraba", "rucula"],
+        "question": "sem perguntas",
+        "options": ["A", "B", "C", "D"],
         "answer": 1
     }
 ]
