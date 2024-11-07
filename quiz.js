@@ -1,6 +1,7 @@
 let questions = [];
 let currentQuestion = 0;
 let score = 0;
+let shuffledOptions = []; // Armazena as opções embaralhadas
 
 async function fetchQuestions() {
     try {
@@ -12,7 +13,6 @@ async function fetchQuestions() {
         const data = await response.json();
         console.log("Dados carregados com sucesso:", data);
 
-        // Embaralha as perguntas carregadas
         questions = shuffleArray(data);
 
         if (questions.length === 0) {
@@ -49,23 +49,29 @@ function loadQuestion() {
     // Exibe a pergunta com a numeração
     questionElement.innerText = `Pergunta ${currentQuestion + 1}: ${questions[currentQuestion].question}`;
     
+    // Embaralha as opções e armazena a posição correta
+    shuffledOptions = shuffleArray([...questions[currentQuestion].options]);
+    const correctAnswerIndex = shuffledOptions.indexOf(questions[currentQuestion].options[questions[currentQuestion].answer]);
+
     optionButtons.forEach((button, index) => {
-        button.innerText = questions[currentQuestion].options[index];
+        button.innerText = shuffledOptions[index];
         button.style.backgroundColor = "#007bff";
         button.disabled = false;
+
+        // Adiciona o evento para identificar a resposta correta
+        button.onclick = () => selectOption(index, correctAnswerIndex);
     });
 }
 
-function selectOption(selectedOption) {
-    const question = questions[currentQuestion];
+function selectOption(selectedOption, correctAnswerIndex) {
     const optionButtons = document.querySelectorAll(".option");
 
-    if (selectedOption === question.answer) {
+    if (selectedOption === correctAnswerIndex) {
         score++;
         optionButtons[selectedOption].style.backgroundColor = "#28a745";
     } else {
         optionButtons[selectedOption].style.backgroundColor = "#dc3545";
-        optionButtons[question.answer].style.backgroundColor = "#28a745";
+        optionButtons[correctAnswerIndex].style.backgroundColor = "#28a745";
     }
 
     optionButtons.forEach(button => button.disabled = true);
