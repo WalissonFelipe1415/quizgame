@@ -1,6 +1,6 @@
 [
     {
-        "question": "Quais são os alimentos mais recomendados para uma vida longa e saudável?",
+        "question": "1)Quais são os alimentos mais recomendados para uma vida longa e saudável?",
         "options": [
             "A) Açúcar refinado e bebidas açucaradas",
             "B) Alimentos fritos e gordurosos",
@@ -10,7 +10,7 @@
         "answer": "3"
     },
     {
-        "question": "Qual é o impacto do consumo regular de alimentos ultraprocessados na longevidade?",
+        "question": "2)Qual é o impacto do consumo regular de alimentos ultraprocessados na longevidade?",
         "options": [
             "A) Não afeta a longevidade",
             "B) É saudável apenas em quantidades moderadas",
@@ -20,7 +20,7 @@
         "answer": "2"
     },
     {
-        "question": "Quais frutas e vegetais são mais benéficos para a longevidade?",
+        "question": "3)Quais frutas e vegetais são mais benéficos para a longevidade?",
         "options": [
             "A) Milho e mandioca fritos",
             "B) Maçãs, brócolis e folhas verdes",
@@ -30,7 +30,7 @@
         "answer": "1"
     },
     {
-        "question": "Quais gorduras são consideradas boas para a saúde e a longevidade?",
+        "question": "4)Quais gorduras são consideradas boas para a saúde e a longevidade?",
         "options": [
             "A) Gordura trans e óleos refinados",
             "B) Margarina e óleo vegetal hidrogenado",
@@ -40,7 +40,7 @@
         "answer": "2"
     },
     {
-        "question": "Como o consumo de carne vermelha afeta a expectativa de vida?",
+        "question": "5)Como o consumo de carne vermelha afeta a expectativa de vida?",
         "options": [
             "A) É benéfico em grandes quantidades",
             "B) Aumenta o risco de doenças cardiovasculares",
@@ -50,7 +50,7 @@
         "answer": "1"
     },
     {
-        "question": "É verdade que dietas com baixo consumo de açúcar aumentam a longevidade?",
+        "question": "6)É verdade que dietas com baixo consumo de açúcar aumentam a longevidade?",
         "options": [
             "A) Sim, pois reduzem o risco de doenças crônicas",
             "B) Não, pois o açúcar é essencial para o corpo",
@@ -60,7 +60,7 @@
         "answer": "0"
     },
     {
-        "question": "Os alimentos fermentados, como iogurte e kimchi, podem aumentar a expectativa de vida?",
+        "question": "7)Os alimentos fermentados, como iogurte e kimchi, podem aumentar a expectativa de vida?",
         "options": [
             
             "A) Não, apenas alteram o sabor dos alimentos",
@@ -71,7 +71,7 @@
         "answer": "2"
     },
     {
-        "question": "Existe uma quantidade ideal de café ou chá para melhorar a longevidade?",
+        "question": "8)Existe uma quantidade ideal de café ou chá para melhorar a longevidade?",
         "options": [
             
             "A) Não, pois são prejudiciais ao coração","B) Sim, cerca de uma a três xícaras por dia",
@@ -81,7 +81,7 @@
         "answer": "1"
     },
     {
-        "question": "O consumo moderado de vinho tinto realmente beneficia a saúde a longo prazo?",
+        "question": "9)O consumo moderado de vinho tinto realmente beneficia a saúde a longo prazo?",
         "options": [
             "A) Não, o álcool é sempre prejudicial",
             "B) Apenas em doses acima de 250ml por dia",
@@ -91,7 +91,7 @@
         "answer": "3"
     },
     {
-        "question": "Como os grãos integrais contribuem para uma maior expectativa de vida?",
+        "question": "10)Como os grãos integrais contribuem para uma maior expectativa de vida?",
         "options": [
             "A) Ajudam na regulação do açúcar no sangue",
             "B) Não têm qualquer efeito na saúde",
