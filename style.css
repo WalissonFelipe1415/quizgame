@@ -1,9 +1,6 @@
 
 body {
     display: flex;
-    position: fixed;
-    top: 100px; /* Define uma posição vertical fixa */
-    left: 50%;
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
