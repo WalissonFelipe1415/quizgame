@@ -7,18 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-    function qrcode() {
-        window.location.href = 'QRcode.html'; // Altere para o caminho desejado
-    }
-</script>
-<button class="qrcode" onclick="qrcode()">
-    <img src="IMG_20241107_083350.png" alt="qr code" style="width: 70px; height: 90px;">
-</button>
-
-
+    <img src="LOGO.png" alt="LOGO" style="width: 200px; height: 200px;">
     <div class="quiz-container" id="quiz">
-        <h2 id="question">Pergunta...isso acontece porque não esta funcionando.</h2>
+        <h2 id="question">Pergunta...isso acontece porque não está funcionando.</h2>
         <div class="options">
             <button class="option" onclick="selectOption(0)">Opção 1</button>
             <button class="option" onclick="selectOption(1)">Opção 2</button>
@@ -28,23 +19,18 @@
         <button id="nextBtn" onclick="nextQuestion()">Próxima</button>
     </div>
 
+    <!-- Botão QR Code abaixo do quiz-container -->
+    <button class="qrcode" onclick="qrcode()">
+        <img src="scan.png" alt="qr code" style="width: 70px; height: 90px;">
+    </button>
+
     <script src="quiz.js"></script>
+    <script>
+        function qrcode() {
+            window.location.href = 'QRcode.html'; // Altere para o caminho desejado
+        }
+    </script>
+
+    
 </body>
-<style>
-     .qrcode {
-    position: absolute;
-    top: 370px;
-    right: 20px;
-    background-color: #f0f0f0;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    font-size: 18px;
-    cursor: pointer;
-}
-        
-        
-</style>
 </html>

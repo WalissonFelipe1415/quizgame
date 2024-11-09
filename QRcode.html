@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code</title>
     <style>
+        /* Ajustes para o plano de fundo responsivo */
         body {
-            position: fixed;
             display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Faz o contêiner ocupar toda a altura da tela */
+            justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #004595
+            background: #2877e2 url('fundo.jpg') no-repeat center center; /* Cor de fundo similar com imagem */
+            background-size: contain; /* A imagem mantém o aspecto original, ajustando-se na tela */
         }
+
         .sair {
             position: absolute;
             top: 20px;
             right: 20px;
-            background-color: #ff4c4c;
+            background-color: #2877e2;
             color: #fff;
             border: none;
             border-radius: 50%;
@@ -29,19 +30,22 @@
             font-size: 18px;
             cursor: pointer;
         }
+
         .qr-container {
             text-align: center;
-            background-color: #004595;
-            padding: 0px;
+            background-color: rgba(40, 119, 226, 0.8); /* Fundo semitransparente */
+            padding: 20px;
             border-radius: 20px;
         }
+
         .qr-container img {
-            width: 360px;
-            height: 600px;
+            width: 320px;
+            height: 320px;
         }
+
         .qr-container p {
             margin-top: 10px;
-            color: #333;
+            color: #ffffff;
             font-size: 18px;
         }
     </style>
@@ -52,6 +56,9 @@
 
 <div class="qr-container">    
     <img src="qr.png" alt="QR Code">
+    <p>Escaneie o código QR</p>
+    <P>3°ANO REG 2 ENSINO MEDIO</P>
+    <P>DOMINGOS PIMENTA 2024</P>
 </div>    
 
 <script>
