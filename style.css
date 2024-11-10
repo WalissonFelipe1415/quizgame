@@ -14,7 +14,7 @@ body {
         .quiz-container {
             text-align: center;
             background: #ffffff;
-            padding: 20px;
+            padding: 30px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
             border-radius: 20px;
             margin: 50px;
@@ -76,13 +76,48 @@ body {
         }
 
         .qrcode {
-            margin-top: 20px; /* Espaço entre o quiz-container e o botão */
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: #4e8afa;
             color: #fff;
             border: none;
-            border-radius: 0px;
+            border-radius: 10px;
+            width: 90px;
+            height: 90px;
             font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
         }
+        /* Ajustes de tamanho para dispositivos menores */
+        @media (max-width: 968px) { /* Tablets e smartphones maiores */
+            .qrcode {
+                width: 70px;
+                height: 70px;
+                font-size: 16px;
+            }
+        }
+        
+        /* Ajustes de tamanho para dispositivos menores */
+        @media (max-width: 768px) { /* Tablets e smartphones maiores */
+            .qrcode {
+                width: 70px;
+                height: 70px;
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) { /* Smartphones menores */
+            .qrcode {
+                width: 50px;
+                height: 50px;
+                font-size: 14px;
+            }
+        }
+        
         .LOGO {
             margin-top: 20px; /* Espaço entre o quiz-container e o botão */
             background-color: #4e8afa;
