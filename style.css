@@ -92,31 +92,7 @@ body {
             justify-content: center;
             cursor: pointer;
         }
-        /* Ajustes de tamanho para dispositivos menores */
-        @media (max-width: 968px) { /* Tablets e smartphones maiores */
-            .qrcode {
-                width: 20px;
-                height: 20px;
-                font-size: 16px;
-            }
-        }
         
-        /* Ajustes de tamanho para dispositivos menores */
-        @media (max-width: 768px) { /* Tablets e smartphones maiores */
-            .qrcode {
-                width: 20px;
-                height: 20px;
-                font-size: 16px;
-            }
-        }
-        
-        @media (max-width: 480px) { /* Smartphones menores */
-            .qrcode {
-                width: 20px;
-                height: 20px;
-                font-size: 14px;
-            }
-        }
         
         .LOGO {
             margin-top: 20px; /* Espaço entre o quiz-container e o botão */
