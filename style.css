@@ -1,8 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     font-family: Arial, sans-serif;
     background: #4e8afa;
     margin: 25px; /* Altere para 0 se não quiser margem ao redor */
