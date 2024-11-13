@@ -17,11 +17,24 @@ body {
             padding: 30px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
             border-radius: 20px;
-            margin: 50px;
+            margin: 5px;
             max-width: 400px;
             width: 100%;
         }
-
+        .quiz-topbar {
+            text-align: center;
+            background: #ffffff;
+            padding: 0px;
+            font-size: 50px;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            margin: 0px;
+            max-width: 400px;
+            width: 100%;
+        }
         h2 {
             margin: 5px;
             font-size: 20px;
@@ -31,10 +44,15 @@ body {
         .TEXT{
             margin: 5px;
             font-size: 25px;
-            color: #FFF;
+            color: #0c68d1;
             font-weight: bold;
         }
-
+        .TEXTbat{
+            margin: 5px;
+            font-size: 25px;
+            color: #0c68d1;
+            font-weight: bold;
+        }
         .options {
             display: grid;
             gap: 10px;
