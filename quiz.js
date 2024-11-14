@@ -70,4 +70,46 @@ function selectOption(selectedOption, correctAnswerIndex) {
         optionButtons[correctAnswerIndex].style.backgroundColor = "#28a745";
     }
 
-    optionButtons.for
+    optionButtons.forEach(button => button.disabled = true);
+    document.getElementById("nextBtn").disabled = false;
+}
+
+function nextQuestion() {
+    currentQuestion++;
+    loadQuestion();
+}
+
+function showResults() {
+    const quizContainer = document.getElementById("quiz");
+    quizContainer.innerHTML = `<h2>Você acertou ${score} de ${questions.length} perguntas!</h2>`;
+    
+    const restartButton = document.getElementById("restartBtn");
+    restartButton.style.display = "block";
+    restartButton.disabled = true;
+    restartButton.classList.add("nextBtnStyle");
+
+    let countdown = 10;
+    restartButton.innerText = `Espere ${countdown} segundos para reiniciar...`;
+
+    const countdownInterval = setInterval(() => {
+        countdown--;
+        restartButton.innerText = `Espere ${countdown} para reiniciar...`;
+        
+        if (countdown === 0) {
+            clearInterval(countdownInterval);
+            restartButton.disabled = false;
+            restartButton.innerText = "Reiniciar";
+        }
+    }, 1000);
+}
+
+function restartQuiz() {
+    currentQuestion = 0;
+    score = 0;
+
+    document.getElementById("restartBtn").style.display = "none";
+    fetchQuestions();
+}
+
+// Inicia o quiz
+fetchQuestions();

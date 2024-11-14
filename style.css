@@ -92,14 +92,30 @@ body {
             border: none;
             cursor: pointer;
             border-radius: 10px;
-            
+            margin: 15px;
         }
-
+        
         #nextBtn:disabled {
             background-color: #ff8888;
             color: #ffffff;
             cursor: not-allowed;
+            margin: 15px;
         }
+        #nextBtn, #restartBtn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+#nextBtn:disabled, #restartBtn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    margin: 15px;
+}
 
         .qrcode {
             position: fixed;
