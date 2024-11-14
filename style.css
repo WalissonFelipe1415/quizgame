@@ -22,18 +22,25 @@ body {
             width: 100%;
         }
         .quiz-topbar {
+            display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
             text-align: center;
             background: #ffffff;
             padding: 0px;
             font-size: 50px;
-            justify-content: center;
-            align-items: center;
             font-family: Arial, sans-serif;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
             border-radius: 20px;
             margin: 0px;
             max-width: 400px;
             width: 100%;
+        }
+        .space {
+         
+            background-color: brown;
+        
         }
         h2 {
             margin: 5px;
