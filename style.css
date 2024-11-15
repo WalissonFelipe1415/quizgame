@@ -120,8 +120,8 @@ body {
 .qrcode {
     position: fixed;
     top: 20px;      /* Ajusta a posição vertical */
-    right: 20px;    /* Ajusta a posição horizontal */
-    width: 60px;
+    right: 0px;    /* Ajusta a posição horizontal */
+    width: 130px;
     height: 80px;
     cursor: pointer;
     z-index: 1000;  /* Garante que o QR code fique acima de outros elementos */
