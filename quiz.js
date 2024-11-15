@@ -22,8 +22,11 @@ async function fetchQuestions() {
 
         loadQuestion();
     } catch (error) {
+        const questionElement = document.getElementById("question");
         console.error("Erro ao carregar perguntas:", error);
         alert("Não foi possível carregar as perguntas. Verifique a URL e a conexão com a internet.");
+        questionElement.innerText = `Não foi possível carregar as perguntas. Verifique a URL e a conexão com a internet.`;
+        
     }
 }
 
@@ -51,11 +54,12 @@ function loadQuestion() {
     shuffledOptions = shuffleArray([...questions[currentQuestion].options]);
     const correctAnswerIndex = shuffledOptions.indexOf(questions[currentQuestion].options[questions[currentQuestion].answer]);
 
+    const labels = ['a', 'b', 'c', 'd']; // Adiciona os rótulos das opções
+
     optionButtons.forEach((button, index) => {
-        button.innerText = shuffledOptions[index];
+        button.innerText = `${labels[index]}) ${shuffledOptions[index]}`; // Inclui o rótulo antes do texto
         button.style.backgroundColor = "#007bff";
         button.disabled = false;
-
         button.onclick = () => selectOption(index, correctAnswerIndex);
     });
 }
@@ -66,9 +70,12 @@ function selectOption(selectedOption, correctAnswerIndex) {
     if (selectedOption === correctAnswerIndex) {
         score++;
         optionButtons[selectedOption].style.backgroundColor = "#28a745";
+        optionButtons[correctAnswerIndex].style.border = "#0054ab";
     } else {
         optionButtons[selectedOption].style.backgroundColor = "#dc3545";
+        optionButtons[selectedOption].style.border = "#ab0000";
         optionButtons[correctAnswerIndex].style.backgroundColor = "#28a745";
+        optionButtons[correctAnswerIndex].style.border = "#0054ab";
     }
 
     optionButtons.forEach(button => button.disabled = true);

@@ -22,8 +22,8 @@ body {
         .quiz-container {
             text-align: center;
             background: #ffffff;
-            padding: 5px;
-           
+            
+            padding: 0 20px;
             border-radius: 20px;
             margin: 5px;
             max-width: 400px;
@@ -38,10 +38,10 @@ body {
     align-items: center;
             text-align: center;
             background: #ffffff;
-            padding: 5px;
+            
             font-size: 50px;
             font-family: Arial, sans-serif;
-           
+            padding: 0 20px;
             border-radius: 20px;
             margin: 0px;
             max-width: 400px;
@@ -68,7 +68,7 @@ body {
         .TEXTbat{
             margin: 5px;
             font-size: 28px;
-            color: #0c68d1;
+            color: #83b4ff;
             font-weight: bold;
         }
         .options {
@@ -81,7 +81,9 @@ body {
         .option {
             padding: 15px;
             font-size: 16px;
-            background-color: #0c68d1;
+            justify-content: flex-start;
+            text-align: left;
+            background-color: #ff0404;
             color: white;
             font-weight: bold;
             border: none;
@@ -91,7 +93,7 @@ body {
         }
        
         .option:hover {
-            background-color: #c3e0ff;
+            background-color: #000000;
         }
 
         #nextBtn {
@@ -115,7 +117,7 @@ body {
             border: 1px solid black;
         }
         #nextBtn, #restartBtn {
-    background-color: #007bff;
+    background-color: #3c80ff;
     color: #fff;
     padding: 10px 20px;
     border: none;
