@@ -1,102 +1,131 @@
 [
     {
-        "question": "Quais são os alimentos mais recomendados para uma vida longa e saudável?",
+        "question": "O que são alimentos funcionais e como eles impactam a saúde?",
         "options": [
-            " Açúcar refinado e bebidas açucaradas",
-            " Alimentos fritos e gordurosos",
-            " Carnes vermelhas e alimentos processados",
-            " Frutas, legumes e oleaginosas"
-        ],
-        "answer": "3"
-    },
-    {
-        "question": "Qual é o impacto do consumo regular de alimentos ultraprocessados na longevidade?",
-        "options": [
-            " Não afeta a longevidade",
-            " É saudável apenas em quantidades moderadas",
-            " Diminui a longevidade",
-            " Aumenta a longevidade"
-        ],
-        "answer": "2"
-    },
-    {
-        "question": "Quais frutas e vegetais são mais benéficos para a longevidade?",
-        "options": [
-            " Milho e mandioca fritos",
-            " Maçãs, brócolis e folhas verdes",
-            " Batatas fritas e bananas",
-            " Abacaxi e manga em calda"
+            "São alimentos que causam ganho de peso",
+            "Alimentos que ajudam no combate de doenças",
+            "Alimentos que não possuem nutrientes",
+            "São alimentos ultraprocessados"
         ],
         "answer": "1"
     },
     {
-        "question": "Quais gorduras são consideradas boas para a saúde e a longevidade?",
+        "question": "O que é considerado um consumo saudável de sal?",
         "options": [
-            " Gordura trans e óleos refinados",
-            " Margarina e óleo vegetal hidrogenado",
-            " Óleo de coco e azeite de oliva",
-            " Manteiga e banha animal"
-        ],
-        "answer": "2"
-    },
-    {
-        "question": "Como o consumo de carne vermelha afeta a expectativa de vida?",
-        "options": [
-            " É benéfico em grandes quantidades",
-            " Aumenta o risco de doenças cardiovasculares",
-            " Não tem impacto algum na saúde",
-            " Só é prejudicial quando não cozida corretamente"
-        ],
-        "answer": "1"
-    },
-    {
-        "question": "É verdade que dietas com baixo consumo de açúcar aumentam a longevidade?",
-        "options": [
-            " Sim, pois reduzem o risco de doenças crônicas",
-            " Não, pois o açúcar é essencial para o corpo",
-            " Apenas quando o açúcar é natural",
-            " Não há relação entre açúcar e longevidade"
+            "Menos de 5 gramas por dia",
+            "Mais de 10 gramas por dia",
+            "A quantidade não importa",
+            "O sal é sempre prejudicial"
         ],
         "answer": "0"
     },
     {
-        "question": "Os alimentos fermentados, como iogurte e kimchi, podem aumentar a expectativa de vida?",
+        "question": "Qual é o benefício de consumir fibras regularmente?",
         "options": [
-            
-            " Não, apenas alteram o sabor dos alimentos",
-            " Sim, mas só em pequenas quantidades",
-            " Sim, pois contribuem para a saúde intestinal",
-            " Não, são prejudiciais à saúde"
-        ],
-        "answer": "2"
-    },
-    {
-        "question": "Existe uma quantidade ideal de café ou chá para melhorar a longevidade?",
-        "options": [
-            
-            " Não, pois são prejudiciais ao coração"," Sim, cerca de uma a três xícaras por dia",
-            " Apenas chá é benéfico",
-            " Não há consenso entre os estudos"
+            "Aumenta o risco de obesidade",
+            "Ajuda na digestão e controle do açúcar no sangue",
+            "Prejudica a absorção de nutrientes",
+            "Causa prisão de ventre"
         ],
         "answer": "1"
     },
     {
-        "question": "O consumo moderado de vinho tinto realmente beneficia a saúde a longo prazo?",
+        "question": "Qual a importância da hidratação para a longevidade?",
         "options": [
-            " Não, o álcool é sempre prejudicial",
-            " Apenas em doses acima de 250ml por dia",
-            " Só vinho branco tem benefícios",
-            " Sim, devido aos antioxidantes"
+            "A água não é essencial para a vida",
+            "Ajuda a manter o funcionamento adequado do organismo",
+            "Só é importante em dias quentes",
+            "Beber muita água diminui a expectativa de vida"
         ],
-        "answer": "3"
+        "answer": "1"
     },
     {
-        "question": "Como os grãos integrais contribuem para uma maior expectativa de vida?",
+        "question": "Como o consumo de frutas cítricas beneficia a saúde?",
         "options": [
-            " Ajudam na regulação do açúcar no sangue",
-            " Não têm qualquer efeito na saúde",
-            " Prejudicam a digestão",
-            " São benéficos apenas para o coração"
+            "Contribui para a saúde da pele e sistema imunológico",
+            "Causa acidez no sangue",
+            "Não traz benefícios",
+            "Aumenta o nível de gordura no sangue"
+        ],
+        "answer": "0"
+    },
+    {
+        "question": "Qual é o papel das proteínas vegetais na longevidade?",
+        "options": [
+            "Prejudicam o fígado",
+            "Ajudam a fortalecer os músculos e reduzir doenças crônicas",
+            "Não têm impacto na saúde",
+            "Aumentam os níveis de açúcar no sangue"
+        ],
+        "answer": "1"
+    },
+    {
+        "question": "Como as nozes e sementes impactam a saúde a longo prazo?",
+        "options": [
+            "Não têm impacto na saúde",
+            "Aumentam o risco de doenças cardíacas",
+            "Ajudam a reduzir o colesterol e melhoram a saúde cardíaca",
+            "Causam alergias em todos os consumidores"
+        ],
+        "answer": "2"
+    },
+    {
+        "question": "O que significa ter uma dieta balanceada?",
+        "options": [
+            "Comer apenas alimentos crus",
+            "Consumir alimentos de todos os grupos de nutrientes",
+            "Evitar completamente as gorduras",
+            "Comer apenas frutas e vegetais"
+        ],
+        "answer": "1"
+    },
+    {
+        "question": "Qual é o efeito dos exercícios físicos na longevidade?",
+        "options": [
+            "Reduz a expectativa de vida",
+            "Aumenta o risco de doenças",
+            "Melhora a saúde cardiovascular e aumenta a longevidade",
+            "Não traz nenhum benefício"
+        ],
+        "answer": "2"
+    },
+    {
+        "question": "Como o sono adequado impacta a saúde e a longevidade?",
+        "options": [
+            "Ajuda a manter o corpo em equilíbrio e evitar doenças",
+            "Reduz o nível de energia",
+            "É irrelevante para a saúde",
+            "Aumenta o risco de doenças cardíacas"
+        ],
+        "answer": "0"
+    },
+    {
+        "question": "Qual o impacto do consumo de água com açúcar na saúde?",
+        "options": [
+            "É essencial para a hidratação",
+            "Pode aumentar o risco de diabetes",
+            "Ajuda a melhorar a saúde dos ossos",
+            "Substitui a necessidade de fibras"
+        ],
+        "answer": "1"
+    },
+    {
+        "question": "Qual é o papel dos antioxidantes para a saúde?",
+        "options": [
+            "Causam envelhecimento precoce",
+            "Reduzem os danos celulares e ajudam a prevenir doenças crônicas",
+            "Não têm impacto na saúde",
+            "São encontrados apenas em alimentos fritos"
+        ],
+        "answer": "1"
+    },
+    {
+        "question": "Como o consumo excessivo de carnes processadas afeta a saúde?",
+        "options": [
+            "Aumenta o risco de câncer e doenças cardíacas",
+            "É benéfico para a saúde em geral",
+            "Melhora a digestão",
+            "Não tem efeito na saúde"
         ],
         "answer": "0"
     }

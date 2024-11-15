@@ -13,7 +13,8 @@ async function fetchQuestions() {
         const data = await response.json();
         console.log("Dados carregados com sucesso:", data);
 
-        questions = shuffleArray(data);
+        // Embaralha as perguntas e seleciona apenas as primeiras 10
+        questions = shuffleArray(data).slice(0, 10);
 
         if (questions.length === 0) {
             throw new Error("Nenhuma pergunta encontrada.");
@@ -78,37 +79,17 @@ function nextQuestion() {
     currentQuestion++;
     loadQuestion();
 }
-
-function showResults() {
-    const quizContainer = document.getElementById("quiz");
-    quizContainer.innerHTML = `<h2>Você acertou ${score} de ${questions.length} perguntas!</h2>`;
-    
-    const restartButton = document.getElementById("restartBtn");
-    restartButton.style.display = "block";
-    restartButton.disabled = true;
-    restartButton.classList.add("nextBtnStyle");
-
-    let countdown = 10;
-    restartButton.innerText = `Espere ${countdown} segundos para reiniciar...`;
-
-    const countdownInterval = setInterval(() => {
-        countdown--;
-        restartButton.innerText = `Espere ${countdown} para reiniciar...`;
-        
-        if (countdown === 0) {
-            clearInterval(countdownInterval);
-            restartButton.disabled = false;
-            restartButton.innerText = "Reiniciar";
-        }
-    }, 1000);
-}
-
 function restartQuiz() {
     currentQuestion = 0;
     score = 0;
 
     document.getElementById("restartBtn").style.display = "none";
     fetchQuestions();
+}
+function showResults() {
+    const quizContainer = document.getElementById("quiz");
+    quizContainer.innerHTML = `<h2>Você acertou ${score} de ${questions.length} perguntas!</h2>`;
+    document.getElementById("restartBtn").style.display = "block";  // Exibe o botão de reiniciar
 }
 
 // Inicia o quiz

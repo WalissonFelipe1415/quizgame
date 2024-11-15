@@ -45,19 +45,19 @@ body {
         }
         h2 {
             margin: 5px;
-            font-size: 16px;
+            font-size: 18px;
             color: #0c68d1;
             font-weight: bold;
         }
         .TEXT{
-            margin: 5px;
-            font-size: 25px;
+            margin: 20px;
+            font-size: 33px;
             color: #0c68d1;
             font-weight: bold;
         }
         .TEXTbat{
             margin: 5px;
-            font-size: 25px;
+            font-size: 28px;
             color: #0c68d1;
             font-weight: bold;
         }
