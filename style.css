@@ -20,8 +20,10 @@ body {
             margin: 5px;
             max-width: 400px;
             width: 100%;
+            border: 1px solid black;
         }
         .quiz-topbar {
+            border: 1px solid black;
             display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -77,6 +79,7 @@ body {
             border: none;
             cursor: pointer;
             border-radius: 10px;
+            border: 1px solid black;
         }
        
         .option:hover {
@@ -92,23 +95,26 @@ body {
             border: none;
             cursor: pointer;
             border-radius: 10px;
-            margin: 15px;
+            margin: 12px;
+            border: 1px solid black;
         }
         
         #nextBtn:disabled {
             background-color: #ff8888;
             color: #ffffff;
             cursor: not-allowed;
-            margin: 15px;
+            margin: 12px;
+            border: 1px solid black;
         }
         #nextBtn, #restartBtn {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     margin: 15px;
+    border: 1px solid black;
 }
 
 #nextBtn:disabled, #restartBtn:disabled {
@@ -121,7 +127,7 @@ body {
     position: fixed;
     top: 20px;      /* Ajusta a posição vertical */
     right: 0px;    /* Ajusta a posição horizontal */
-    width: 130px;
+    width: 140px;
     height: 80px;
     cursor: pointer;
     z-index: 1000;  /* Garante que o QR code fique acima de outros elementos */
