@@ -1,5 +1,5 @@
 :root {
-    --bg-scale: 30%; /* Controle de escala */
+    --bg-scale: 70%; /* Controle de escala */
   }
 body {
     display: flex;
@@ -79,7 +79,7 @@ body {
         }
 
         .option {
-            padding: 10px;
+            padding: 15px;
             font-size: 16px;
             background-color: #0c68d1;
             color: white;
