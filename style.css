@@ -117,23 +117,17 @@ body {
     margin: 15px;
 }
 
-        .qrcode {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #4e8afa;
-            color: #fff;
-            border: none;
-            border-radius: 0px;
-            width: 90px;
-            height: 90px;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            cursor: pointer;
-        }
+.qrcode {
+    position: fixed;
+    top: 20px;      /* Ajusta a posição vertical */
+    right: 20px;    /* Ajusta a posição horizontal */
+    width: 60px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 1000;  /* Garante que o QR code fique acima de outros elementos */
+}
+
+
         
         
         .LOGO {
