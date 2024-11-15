@@ -59,6 +59,7 @@ function loadQuestion() {
     optionButtons.forEach((button, index) => {
         button.innerText = `${labels[index]}) ${shuffledOptions[index]}`; // Inclui o rótulo antes do texto
         button.style.backgroundColor = "#007bff";
+        optionButtons[correctAnswerIndex].style.border = "#0054ab";
         button.disabled = false;
         button.onclick = () => selectOption(index, correctAnswerIndex);
     });
