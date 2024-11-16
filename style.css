@@ -140,7 +140,7 @@ body {
     width: 140px;
     height: 80px;
     cursor: pointer;
-    animation: bounce 2s infinite; /* Animação contínua */
+    animation: bounce 5s infinite; /* Animação contínua */
     z-index: 1000;  /* Garante que o QR code fique acima de outros elementos */
 }
 
@@ -167,10 +167,10 @@ body {
         /* Definição da animação */
         @keyframes bounce {
             0%, 100% {
-                transform: translateY(110px); /* Posição inicial e final */
+                transform: translateY(10px); /* Posição inicial e final */
             }
             50% {
-                transform: translateY(150px); /* Move para cima no meio do ciclo */
+                transform: translateY(90px); /* Move para cima no meio do ciclo */
             }
         }
         
