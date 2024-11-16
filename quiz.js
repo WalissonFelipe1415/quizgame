@@ -59,7 +59,7 @@ function loadQuestion() {
     optionButtons.forEach((button, index) => {
         button.innerText = `${labels[index]}) ${shuffledOptions[index]}`; // Inclui o rótulo antes do texto
         button.style.backgroundColor = "#007bff";
-        optionButtons[correctAnswerIndex].style.border = "#0054ab";
+        button.style.border  =  '2px solid #0054ab';
         button.disabled = false;
         button.onclick = () => selectOption(index, correctAnswerIndex);
     });
@@ -71,12 +71,12 @@ function selectOption(selectedOption, correctAnswerIndex) {
     if (selectedOption === correctAnswerIndex) {
         score++;
         optionButtons[selectedOption].style.backgroundColor = "#28a745";
-        optionButtons[correctAnswerIndex].style.border = "#0054ab";
+        optionButtons[correctAnswerIndex].style.border = '2px solid #3c9600';
     } else {
         optionButtons[selectedOption].style.backgroundColor = "#dc3545";
-        optionButtons[selectedOption].style.border = "#ab0000";
+        optionButtons[selectedOption].style.border = '2px solid #ab0000';
         optionButtons[correctAnswerIndex].style.backgroundColor = "#28a745";
-        optionButtons[correctAnswerIndex].style.border = "#0054ab";
+        optionButtons[correctAnswerIndex].style.border = '2px solid #3c9600';
     }
 
     optionButtons.forEach(button => button.disabled = true);

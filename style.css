@@ -89,7 +89,7 @@ body {
             border: none;
             cursor: pointer;
             border-radius: 20px;
-            border: 1px solid rgb(149, 149, 149);
+            border: 1px solid rgb(0, 0, 0);
         }
        
         .option:hover {
@@ -140,6 +140,7 @@ body {
     width: 140px;
     height: 80px;
     cursor: pointer;
+    animation: bounce 2s infinite; /* Animação contínua */
     z-index: 1000;  /* Garante que o QR code fique acima de outros elementos */
 }
 
@@ -160,3 +161,16 @@ body {
             align-items: center;
             justify-content: center;
         }
+
+        
+        
+        /* Definição da animação */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(110px); /* Posição inicial e final */
+            }
+            50% {
+                transform: translateY(150px); /* Move para cima no meio do ciclo */
+            }
+        }
+        
