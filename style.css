@@ -10,9 +10,7 @@ body {
     background: #539bff;
     margin: 40px; /* Altere para 0 se não quiser margem ao redor */
     padding: 0;
-    
     overflow-y: hidden; /* Impede a rolagem vertical */
-    
       height: 100vh;
       background-image: url('fundo.png'); /* Substitua pelo caminho da sua imagem */
       background-repeat: repeat; /* Faz a imagem se repetir */
@@ -140,7 +138,7 @@ body {
     width: 140px;
     height: 80px;
     cursor: pointer;
-    animation: bounce 5s infinite; /* Animação contínua */
+    animation: bounce 2s infinite; /* Animação contínua */
     z-index: 1000;  /* Garante que o QR code fique acima de outros elementos */
 }
 
@@ -170,7 +168,7 @@ body {
                 transform: translateY(10px); /* Posição inicial e final */
             }
             50% {
-                transform: translateY(90px); /* Move para cima no meio do ciclo */
+                transform: translateY(40px); /* Move para cima no meio do ciclo */
             }
         }
         

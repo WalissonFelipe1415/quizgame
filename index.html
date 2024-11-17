@@ -37,6 +37,26 @@
         function qrcode() {
             window.location.href = 'QRcode.html'; // Altere para o caminho desejado
         }
+        
+        // Posição inicial
+        let posX = 0;
+        let posY = 0;
+
+        // Velocidade de movimento
+        const speedX = -0.1; // Velocidade no eixo X (aumente ou diminua)
+        const speedY = -0.1; // Velocidade no eixo Y
+
+        // Função para animar o fundo
+        function animateBackground() {
+            posX += speedX;
+            posY += speedY;
+            document.body.style.backgroundPosition = `${posX}px ${posY}px`; // Atualiza a posição do fundo
+            requestAnimationFrame(animateBackground); // Continua o loop
+        }
+
+        // Inicia a animação
+        animateBackground();
+    
     </script>
     
 
