@@ -8,7 +8,7 @@ body {
     align-items: center;
     font-family: Arial, sans-serif;
     background: #539bff;
-    margin: 25px; /* Altere para 0 se não quiser margem ao redor */
+    margin: 40px; /* Altere para 0 se não quiser margem ao redor */
     padding: 0;
     
     overflow-y: hidden; /* Impede a rolagem vertical */
