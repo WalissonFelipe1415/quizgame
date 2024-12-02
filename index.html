@@ -3,63 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Loja Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 1rem;
+            text-align: center;
+        }
+        .product-info h3 {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        .product-info p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .product-info .price {
+            color: #E63946;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="qrcode-container">
-        <img class="qrcode" src="scan.png" alt="qr code" onclick="qrcode()">
+    <header>
+        <h1>Loja Virtual</h1>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Busque um produto...">
     </div>
-    <div class="quiz-topbar" id="quiz">
-        <img src="quiz.png" style="width: 210px; height: 110px; float: right;">
+    <div class="container" id="product-container"></div>
+    <footer>
+        <p>&copy; 2024 Loja Virtual. Todos os direitos reservados.</p>
+    </footer>
 
-    </div>
-    
-    <div class="quiz-container" id="quiz">
-    
-        <h2 id="question">Pergunta...isso acontece porque não está funcionando.</h2>
-        <div class="options">
-            <button class="option" onclick="selectOption(0)">Opção 1</button>
-            <button class="option" onclick="selectOption(1)">Opção 2</button>
-            <button class="option" onclick="selectOption(2)">Opção 3</button>
-            <button class="option" onclick="selectOption(3)">Opção 4</button>
-        </div>
-        <button id="nextBtn" onclick="nextQuestion()">Próxima</button>
-        
-        <button id="restartBtn" onclick="restartQuiz()" style="display: none;">Reiniciar Quiz</button>
-    </div>
-
-    <!-- Botão QR Code abaixo do quiz-container --> 
-
-    
-    <script src="quiz.js"></script>
     <script>
-        function qrcode() {
-            window.location.href = 'QRcode.html'; // Altere para o caminho desejado
-        }
-        
-        // Posição inicial
-        let posX = 0;
-        let posY = 0;
+        const products = [
+            {
+                "id": 1,
+                "nome": "Smartphone Samsung Galaxy S21",
+                "preco": 3299.90,
+                "imagem": "https://images.samsung.com/is/image/samsung/p6pim/br/galaxy-s21-5g-g991-sm-g991bzvdzto-frontphantomviolet-thumb-368948855"
+            },
+            {
+                "id": 2,
+                "nome": "Notebook Dell Inspiron 15",
+                "preco": 4299.99,
+                "imagem": "https://i.dell.com/sites/imagecontent/products/PublishingImages/inspiron-15-5510-laptop/notebook-inspiron-15-series.png"
+            },
+            {
+                "id": 3,
+                "nome": "Tênis Nike Air Max 270",
+                "preco": 799.90,
+                "imagem": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1ce4179e-5731-4200-9775-57fbe0b44a16/air-max-270-mens-shoes-KkLcGR.png"
+            },
+            {
+                "id": 4,
+                "nome": "Console PlayStation 5",
+                "preco": 4499.00,
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/PlayStation_5_console_%28side_view%29.png/800px-PlayStation_5_console_%28side_view%29.png"
+            },
+            {
+                "id": 5,
+                "nome": "Fone de Ouvido Bluetooth JBL Tune 510BT",
+                "preco": 349.90,
+                "imagem": "https://images.jbl.com/420x420/jbl_tune_510bt_product_image.png"
+            }
+        ];
 
-        // Velocidade de movimento
-        const speedX = -0.1; // Velocidade no eixo X (aumente ou diminua)
-        const speedY = -0.1; // Velocidade no eixo Y
-
-        // Função para animar o fundo
-        function animateBackground() {
-            posX += speedX;
-            posY += speedY;
-            document.body.style.backgroundPosition = `${posX}px ${posY}px`; // Atualiza a posição do fundo
-            requestAnimationFrame(animateBackground); // Continua o loop
-        }
-
-        // Inicia a animação
-        animateBackground();
-    
+        // Carregar produtos no HTML
+        const container = document.getElementById('product-container');
+        products.forEach(product => {
+            const productCard = `
+                <div class="product-card">
+                    <img src="${product.imagem}" alt="${product.nome}">
+                    <div class="product-info">
+                        <h3>${product.nome}</h3>
+                        <p class="price">R$ ${product.preco.toFixed(2)}</p>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += productCard;
+        });
     </script>
-    
-
-    
 </body>
 </html>
