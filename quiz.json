@@ -1,132 +1,17 @@
 [
-    {
-        "question": "O que são alimentos funcionais e como eles impactam a saúde?",
-        "options": [
-            "São alimentos que causam ganho de peso",
-            "Alimentos que ajudam no combate de doenças",
-            "Alimentos que não possuem nutrientes",
-            "São alimentos ultraprocessados"
-        ],
-        "answer": "1"
-    },
-    {
-        "question": "O que é considerado um consumo saudável de sal?",
-        "options": [
-            "Menos de 5 gramas por dia",
-            "Mais de 10 gramas por dia",
-            "A quantidade não importa",
-            "O sal é sempre prejudicial"
-        ],
-        "answer": "0"
-    },
-    {
-        "question": "Qual é o benefício de consumir fibras regularmente?",
-        "options": [
-            "Aumenta o risco de obesidade",
-            "Ajuda na digestão e controle do açúcar no sangue",
-            "Prejudica a absorção de nutrientes",
-            "Causa prisão de ventre"
-        ],
-        "answer": "1"
-    },
-    {
-        "question": "Qual a importância da hidratação para a longevidade?",
-        "options": [
-            "A água não é essencial para a vida",
-            "Ajuda a manter o funcionamento adequado do organismo",
-            "Só é importante em dias quentes",
-            "Beber muita água diminui a expectativa de vida"
-        ],
-        "answer": "1"
-    },
-    {
-        "question": "Como o consumo de frutas cítricas beneficia a saúde?",
-        "options": [
-            "Contribui para a saúde da pele e sistema imunológico",
-            "Causa acidez no sangue",
-            "Não traz benefícios",
-            "Aumenta o nível de gordura no sangue"
-        ],
-        "answer": "0"
-    },
-    {
-        "question": "Qual é o papel das proteínas vegetais na longevidade?",
-        "options": [
-            "Prejudicam o fígado",
-            "Ajudam a fortalecer os músculos e reduzir doenças crônicas",
-            "Não têm impacto na saúde",
-            "Aumentam os níveis de açúcar no sangue"
-        ],
-        "answer": "1"
-    },
-    {
-        "question": "Como as nozes e sementes impactam a saúde a longo prazo?",
-        "options": [
-            "Não têm impacto na saúde",
-            "Aumentam o risco de doenças cardíacas",
-            "Ajudam a reduzir o colesterol e melhoram a saúde cardíaca",
-            "Causam alergias em todos os consumidores"
-        ],
-        "answer": "2"
-    },
-    {
-        "question": "O que significa ter uma dieta balanceada?",
-        "options": [
-            "Comer apenas alimentos crus",
-            "Consumir alimentos de todos os grupos de nutrientes",
-            "Evitar completamente as gorduras",
-            "Comer apenas frutas e vegetais"
-        ],
-        "answer": "1"
-    },
-    {
-        "question": "Qual é o efeito dos exercícios físicos na longevidade?",
-        "options": [
-            "Reduz a expectativa de vida",
-            "Aumenta o risco de doenças",
-            "Melhora a saúde cardiovascular e aumenta a longevidade",
-            "Não traz nenhum benefício"
-        ],
-        "answer": "2"
-    },
-    {
-        "question": "Como o sono adequado impacta a saúde e a longevidade?",
-        "options": [
-            "Ajuda a manter o corpo em equilíbrio e evitar doenças",
-            "Reduz o nível de energia",
-            "É irrelevante para a saúde",
-            "Aumenta o risco de doenças cardíacas"
-        ],
-        "answer": "0"
-    },
-    {
-        "question": "Qual o impacto do consumo de água com açúcar na saúde?",
-        "options": [
-            "É essencial para a hidratação",
-            "Pode aumentar o risco de diabetes",
-            "Ajuda a melhorar a saúde dos ossos",
-            "Substitui a necessidade de fibras"
-        ],
-        "answer": "1"
-    },
-    {
-        "question": "Qual é o papel dos antioxidantes para a saúde?",
-        "options": [
-            "Causam envelhecimento precoce",
-            "Reduzem os danos celulares e ajudam a prevenir doenças crônicas",
-            "Não têm impacto na saúde",
-            "São encontrados apenas em alimentos fritos"
-        ],
-        "answer": "1"
-    },
-    {
-        "question": "Como o consumo excessivo de carnes processadas afeta a saúde?",
-        "options": [
-            "Aumenta o risco de câncer e doenças cardíacas",
-            "É benéfico para a saúde em geral",
-            "Melhora a digestão",
-            "Não tem efeito na saúde"
-        ],
-        "answer": "0"
-    }
+    { "nome": "The Legend of Zelda: Breath of the Wild", "preco": "R$55,00", "imagem": "https://www.pngmart.com/files/4/The-Legend-of-Zelda-Logo-PNG-HD.png" },
+    { "nome": "God of War Ragnarök", "preco": "R$55,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/8/82/God_of_War_2018_capa.png/270px-God_of_War_2018_capa.png" },
+    { "nome": "Red Dead Redemption 2", "preco": "R$55,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/e/e7/Red_Dead_Redemption_2.png/270px-Red_Dead_Redemption_2.png" },
+    { "nome": "Minecraft", "preco": "R$55,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/9/9c/Minecraft_capa.png/260px-Minecraft_capa.png" },
+    { "nome": "Elden Ring", "preco": "R$55,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/0/0d/Elden_Ring_capa.jpg/270px-Elden_Ring_capa.jpg" },
+    { "nome": "FIFA 24", "preco": "R$5,00", "imagem": "https://tse3.mm.bing.net/th?id=OIP.oRiyWIOceqJzXsnfzR5fbwHaHa&pid=Api&P=0&h=180" },
+    { "nome": "Cyberpunk 2077", "preco": "R$55,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/f/f7/Cyberpunk_2077_capa.png/270px-Cyberpunk_2077_capa.png" },
+    { "nome": "Hollow Knight", "preco": "R$35,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/a/a1/Hollow_Knight_Cover.jpg/200px-Hollow_Knight_Cover.jpg" },
+    { "nome": "The Witcher 3: Wild Hunt", "preco": "R$25,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/0/06/TW3_Wild_Hunt.png/270px-TW3_Wild_Hunt.png" },
+    { "nome": "GTA V", "preco": "R$27,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/8/80/Grand_Theft_Auto_V_capa.png/250px-Grand_Theft_Auto_V_capa.png" },
+    { "nome": "Forza Horizon 5", "preco": "R$65,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/d/dc/Capa_de_Forza_Horizon_5.jpg/270px-Capa_de_Forza_Horizon_5.jpg" },
+    { "nome": "Ride 4", "preco": "R$25,00", "imagem": "https://tse1.mm.bing.net/th?id=OIP.zNYeNbTEkFQYPpOsfcSMPQHaE6&pid=Api&P=0&h=180" },
+    { "nome": "Forza Horizon 4", "preco": "R$65,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/5/5f/Capa_do_jogo_Forza_Horizon_4.jpg/250px-Capa_do_jogo_Forza_Horizon_4.jpg" },
+    { "nome": "Bully", "preco": "R$15,00", "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/d/de/Bully_us_capa_pt.jpg/230px-Bully_us_capa_pt.jpg" },
+    { "nome": "Euro Truck", "preco": "R$35,00", "imagem": "https://m.media-amazon.com/images/I/81RtSJLoAXL._AC_SL1500_.jpg" }
 ]
