@@ -76,7 +76,7 @@
         // Função para carregar JSON
         async function carregarJogos() {
             try {
-                const response = await fetch('produtos.json');
+                const response = await fetch('quiz.json');
                 const jogos = await response.json();
                 renderizarJogos(jogos);
             } catch (error) {
